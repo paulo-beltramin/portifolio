@@ -1,13 +1,21 @@
+import { FaArrowDown } from "react-icons/fa6"
+import style from './style.module.scss'
+
+
 
 export const AboutMe = () => {
 
   return (
-    <div className="w-4xl mx-auto mt-5">
-      <p className="text-3xl font-bold">sobre mim</p>
+    <>
+      <div className={style.title}>
+        <p >sobre mim </p>
+       
+        <FaArrowDown size={24} color="red" />
+      </div>
 
-      <div>
-        <img src="" alt="" />
-        <p className="flex justify-center  mx-auto">
+     
+
+        <p className={style.description}>
           Desenvolvedor Front-end com 1 ano de experiência
           em desenvolvimento web, focado por enquanto em criar projetos
           escaláveis e eficientes para fins de estudo .
@@ -17,7 +25,7 @@ export const AboutMe = () => {
           Sempre interessado em explorar novas tecnologias e contribuir
           com projetos desafiadores.
         </p>
-      </div>
-    </div>
+    
+    </>
   )
 }

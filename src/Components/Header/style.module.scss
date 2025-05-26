@@ -1,0 +1,35 @@
+.container {
+
+    .container_links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        @media screen and (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    .web {
+        font-size: 32px;
+        font-weight: 700;
+        color: #E0FFFF;
+
+        @media screen and (max-width:768px) {
+            font-size: 24px;
+        }
+    }
+
+    .developer {
+        font-size: 28px;
+        font-weight: bolder;
+        color: #B0E0E6;
+
+        @media screen and (max-width:768px) {
+            font-size: 24px;
+        }
+    }
+}

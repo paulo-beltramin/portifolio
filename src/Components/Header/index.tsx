@@ -1,25 +1,25 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-
+import style from './style.module.scss'
 export const Header = () => {
 
 
   return (
 
     <>
-      <Navbar bg="primary" data-bs-theme="dark">
+      <Navbar bg="primary" data-bs-theme="dark" className={style.container}>
         <Container>
 
-          <Navbar.Brand href="/" className="flex justify-between w-full items-center">
+          <Navbar.Brand href="/" className={style.container_links}>
             <div>
-              <span className="text-4xl font-extrabold max-md:text-lg max-md:font-bold">
+              <span className={style.web}>
                 Web
               </span>
-              <span className="text-indigo-100 text-3xl max-md:text-sm font-bold">
+              <span className={style.developer}>
                 Developer
               </span>
             </div>
             <div>
-              <Nav className="me-auto text-lg font-bold">
+              <Nav >
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/projetos">Projetos</Nav.Link>
               </Nav>

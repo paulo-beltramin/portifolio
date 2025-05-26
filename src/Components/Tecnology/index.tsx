@@ -1,14 +1,17 @@
-import { FaCss3, FaReact, FaHtml5 } from "react-icons/fa6";
+import { FaCss3, FaReact, FaHtml5, FaArrowDown } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-
+import style from './styles.module.scss'
 
 export const Tecnology = () => {
     return (
-        <div>
-            <p className="text-3xl font-bold max-w-2xl mx-auto mt-5">Tecnologias</p>
-            <section className="max-w-5xl w-full justify-center flex mx-auto ">
-                <ul className="grid grid-cols-5  gap-6 bg-[#0D6EFD] rounded text-white p-4 max-sm:grid-cols-3">
+        <div className={style.container}>
+            <div className={style.title}>
+                <p >Tecnologias</p>
+                <FaArrowDown size={24} color="red"/>
+            </div>
+            <section className={style.tecnology}>
+                <ul >
                     <li>
 
                         <FaHtml5 size={80} />
