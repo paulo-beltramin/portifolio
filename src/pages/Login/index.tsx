@@ -1,29 +1,44 @@
 import { useState, type FormEvent } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router'
-import {auth} from '../../Components/services/db'
+import { auth } from '../../Components/services/db'
 
 import style from './style.module.scss'
+import toast from 'react-hot-toast'
 
 export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-  
+
     const navigate = useNavigate()
 
     const handleLogin = (e: FormEvent) => {
         e.preventDefault()
-   
-        signInWithEmailAndPassword(auth ,email ,password)
-           .then(()=>{
-            alert('logado com sucesso')
-             navigate("/admin")
-           })
 
-           .catch((error)=>{
-            alert('ocorreu um erro ao logar' + error)
-           })
-        
+        signInWithEmailAndPassword(auth, email, password)
+            .then(() => {
+                toast.success('logado com sucesso', {
+                    style: {
+                        backgroundColor: 'green',
+                        fontWeight: 'bold',
+                        color: 'white'
+                    }
+                })
+                navigate("/admin")
+            })
+
+            .catch(() => {
+                if (email || password !== auth.name) {
+                    toast.error('Dados invalidos , verifique seu email e senha de acesso...', {
+                        style: {
+                            backgroundColor: 'red',
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }
+                    })
+                }
+            })
+
 
     }
 
