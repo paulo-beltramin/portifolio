@@ -46,7 +46,8 @@ export const Projects = () => {
           {projects && projects.map((item) => (
             <>
               <div className={style.list}>
-                <Link to={''} key={item.title}>
+                <Link to={'https://web-cars-two.vercel.app/'} key={item.title}
+                  target="_blank">
                   <img src={item.thamb} alt="" title="Clique para ver o projeto" />
                 </Link>
                 <p className={style.title}>
@@ -57,7 +58,9 @@ export const Projects = () => {
                   {item.description}
                 </span>
                 <div >
-                  <button>Ver código no github</button>
+                  <Link to={'https://github.com/paulo-beltramin/webCars'} target="_blank">
+                    <button>Ver código no github</button>
+                  </Link>
                 </div>
               </div>
             </>

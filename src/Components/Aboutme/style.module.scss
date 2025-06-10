@@ -7,8 +7,9 @@
     margin: 0 auto;
     margin-top: 48px;
 
-    @media screen and (max-width:820px) and (min-width: 320px) {
-        padding: 0 8px;
+    @media screen and (max-width:1148px) and (min-width: 319px) {
+       max-width: 90vw;
+       width: 100%;
 
 
     }
@@ -17,7 +18,7 @@
         font-size: 40px;
         font-weight: bold;
 
-        @media screen and (max-width:820px) and (min-width:320px) {
+        @media screen and (max-width:820px) and (min-width:319px) {
             font-size: 32px;
         }
 
@@ -31,9 +32,10 @@
     line-height: 32px;
     font-size: 16px;
     
-    @media screen and (max-width:820px) and (min-width:320px) {
-        padding: 0 8px;
-        margin-bottom: 16px;
+    @media screen and (max-width:1148px) and (min-width:319px) {
+       max-width: 80vw;
+       width: 100%;
+       margin-bottom: 40px;
     }
 
 }

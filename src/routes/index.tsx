@@ -4,6 +4,7 @@ import { Layout } from "../Components/Layout";
 import { Projects } from "../pages/Projects";
 import { Admin } from "../pages/Admin";
 import { Login } from "../pages/Login";
+import { Private } from "../Components/Private";
 
 
 const routes = createBrowserRouter([
@@ -22,7 +23,10 @@ const routes = createBrowserRouter([
 
             {
                 path: '/admin',
-                element: <Admin />
+                element:
+                    <Private>
+                        <Admin />
+                    </Private>
             },
 
             {

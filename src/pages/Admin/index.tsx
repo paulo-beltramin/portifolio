@@ -1,8 +1,9 @@
+import { addDoc, collection} from 'firebase/firestore'
 import { useState, type FormEvent } from 'react'
 import { db } from '../../Components/services/db'
-import { addDoc, collection, getDoc } from 'firebase/firestore'
 
 import style from './style.module.scss'
+import toast from 'react-hot-toast'
 
 export type projectsProps = {
 
@@ -31,7 +32,14 @@ export const Admin = () => {
       setThamb('')
       setTitle(""),
         setDescription('')
-      alert('ok')
+      toast('Dados salvos com sucesso',{
+        style:{
+          backgroundColor:'green',
+          color:'white',
+          padding:'8px',
+          borderRadius:'8px'
+        }
+      })
     })
       .catch((error) => {
         console.log(error)
@@ -44,7 +52,7 @@ export const Admin = () => {
       <section className={style.container}>
         <form className={style.forms} onSubmit={handleRegister}>
           <label>thumbnail do projeto</label>
-          <input type="file" value={thamb} onChange={e => setThamb(e.target.value)} placeholder="thumbNail" />
+          <input type="url" value={thamb} onChange={e => setThamb(e.target.value)} placeholder="thumbNail" />
 
           <label>Titulo do projeto</label>
           <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder="Digite o titulo do projeto" />
