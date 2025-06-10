@@ -7,6 +7,8 @@ import { Login } from "../pages/Login";
 import { Private } from "../Components/Private";
 
 
+
+
 const routes = createBrowserRouter([
     {
         element: <Layout />,
@@ -33,8 +35,11 @@ const routes = createBrowserRouter([
                 path: '/login',
                 element: <Login />
             }
+
         ]
+
     }
+
 ])
 
 export { routes }
