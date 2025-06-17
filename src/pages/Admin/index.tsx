@@ -1,4 +1,4 @@
-import { addDoc, collection} from 'firebase/firestore'
+import { addDoc, collection } from 'firebase/firestore'
 import { useState, type FormEvent } from 'react'
 import { db } from '../../Components/services/db'
 
@@ -9,7 +9,9 @@ export type projectsProps = {
 
   title: string,
   thamb: string,
-  description: string
+  description: string,
+  link: string,
+  git:string
 }
 
 export const Admin = () => {
@@ -17,6 +19,8 @@ export const Admin = () => {
   const [thamb, setThamb] = useState('')
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('')
+  const [link, setLink] = useState('')
+  const [git, setGit] = useState('')
 
   const handleRegister = (e: FormEvent) => {
     e.preventDefault();
@@ -26,18 +30,20 @@ export const Admin = () => {
       title: title,
       thamb: thamb,
       description: description,
+      link: link,
+      git: git
 
     }).then(() => {
 
       setThamb('')
       setTitle(""),
         setDescription('')
-      toast('Dados salvos com sucesso',{
-        style:{
-          backgroundColor:'green',
-          color:'white',
-          padding:'8px',
-          borderRadius:'8px'
+      toast('Dados salvos com sucesso', {
+        style: {
+          backgroundColor: 'green',
+          color: 'white',
+          padding: '8px',
+          borderRadius: '8px'
         }
       })
     })
@@ -52,13 +58,25 @@ export const Admin = () => {
       <section className={style.container}>
         <form className={style.forms} onSubmit={handleRegister}>
           <label>thumbnail do projeto</label>
-          <input type="url" value={thamb} onChange={e => setThamb(e.target.value)} placeholder="thumbNail" />
+          <input type="url" value={thamb}
+            onChange={e => setThamb(e.target.value)} placeholder="thumbNail" />
 
           <label>Titulo do projeto</label>
-          <input type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder="Digite o titulo do projeto" />
+          <input type="text" value={title}
+            onChange={e => setTitle(e.target.value)} placeholder="Digite o titulo do projeto" />
+
+          <label>Link do site</label>
+          <input type="text" value={link}
+            onChange={e => setLink(e.target.value)} placeholder="Digite link para acesso ao site" />
+
+          <label>Link do github</label>
+          <input type="text" value={git}
+            onChange={e => setGit(e.target.value)} placeholder="Digite link do github" />
+
 
           <label>Descrição</label>
-          <textarea placeholder="Descrição" value={description} onChange={e => setDescription(e.target.value)}></textarea>
+          <textarea placeholder="Descrição" value={description}
+            onChange={e => setDescription(e.target.value)}></textarea>
 
           <button>Cadastrar</button>
         </form>

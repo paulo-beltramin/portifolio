@@ -41,15 +41,18 @@
 
         .list {
 
-            height: 40%;
+           height: 40%;
 
             a {
                 img {
-                    height: 200px;
+                     height: 80%;
+                     object-fit: cover;
                     border-radius: 24px;
+                    width: 100%;
+
 
                     @media screen and (max-width:767px) {
-
+                        width: 100%;
                         text-align: center;
                     }
 
@@ -62,14 +65,15 @@
 
             span {
                 display: block;
-                width: 350px;
+                width: 100%;
+                margin-bottom: 24px;
                 height: 100%;
                 text-align: start;
                 line-height: 32px;
 
                 @media screen and (max-width:767px) {
-                    max-width: 90vw;
-                    width: 100%;
+                    width: 90%;
+                    
                 }
             }
 

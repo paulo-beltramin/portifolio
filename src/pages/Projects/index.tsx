@@ -27,7 +27,9 @@ export const Projects = () => {
           list.push({
             title: doc.data().title,
             thamb: doc.data().thamb,
-            description: doc.data().description
+            description: doc.data().description,
+            link: doc.data().link,
+            git: doc.data().git
           })
         })
         setProjects(list)
@@ -46,7 +48,7 @@ export const Projects = () => {
           {projects && projects.map((item) => (
             <>
               <div className={style.list}>
-                <Link to={'https://web-cars-two.vercel.app/'} key={item.title}
+                <Link to={item.link} key={item.title}
                   target="_blank">
                   <img src={item.thamb} alt="" title="Clique para ver o projeto" />
                 </Link>
@@ -58,7 +60,7 @@ export const Projects = () => {
                   {item.description}
                 </span>
                 <div >
-                  <Link to={'https://github.com/paulo-beltramin/webCars'} target="_blank">
+                  <Link to={item.git} target="_blank">
                     <button>Ver código no github</button>
                   </Link>
                 </div>
