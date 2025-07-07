@@ -69,7 +69,7 @@ export const Admin = () => {
           <input type="text" value={link}
             onChange={e => setLink(e.target.value)} placeholder="Digite link para acesso ao site" />
 
-          <label>Link do github</label>
+          <label>Link do github project</label>
           <input type="text" value={git}
             onChange={e => setGit(e.target.value)} placeholder="Digite link do github" />
 
