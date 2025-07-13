@@ -1,6 +1,6 @@
 import { addDoc, collection } from 'firebase/firestore'
 import { useState, type FormEvent } from 'react'
-import { db } from '../../Components/services/db'
+import { db } from '../../../dist/services/db'
 
 import style from './style.module.scss'
 import toast from 'react-hot-toast'

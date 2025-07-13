@@ -1,7 +1,7 @@
 
 import { createContext, useState, useEffect, type ReactNode } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from '../services/db'
+import { auth } from '../../../dist/services/db'
 
 type authProps = {
     enabled: boolean

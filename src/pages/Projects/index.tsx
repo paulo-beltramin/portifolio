@@ -4,7 +4,7 @@ import type { projectsProps } from "../Admin"
 
 import style from './style.module.scss'
 import { collection, getDocs, query } from "firebase/firestore"
-import { db } from "../../Components/services/db"
+import { db } from "../../../dist/services/db"
 
 export const Projects = () => {
   const [projects, setProjects] = useState<projectsProps[]>([])

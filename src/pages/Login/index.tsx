@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router'
-import { auth } from '../../Components/services/db'
+import { auth } from '../../../dist/services/db'
 
 import style from './style.module.scss'
 import toast from 'react-hot-toast'

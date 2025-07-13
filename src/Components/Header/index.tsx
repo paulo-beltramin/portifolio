@@ -2,7 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router";
 import { authContext } from "../Context";
-import { auth } from '../services/db'
+import { auth } from '../../../dist/services/db'
 import style from './style.module.scss'
 import { signOut } from "firebase/auth";
 import { FiLogOut, FiUser } from "react-icons/fi";
