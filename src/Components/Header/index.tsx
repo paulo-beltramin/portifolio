@@ -1,30 +1,12 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router";
-import { authContext } from "../Context";
-import { auth } from '../../../dist/services/db'
-import style from './style.module.scss'
-import { signOut } from "firebase/auth";
-import { FiLogOut, FiUser } from "react-icons/fi";
 
+import { Container, Nav, Navbar } from 'react-bootstrap'
+import style from './style.module.scss'
+import { Link } from 'react-router'
 
 
 
 export const Header = () => {
 
-
-  let { enabled } = useContext(authContext)
-
-  const navigate = useNavigate()
-
-  const handleLogout = () => {
-    signOut(auth)
-
-    return navigate('/login')
-
-
-
-  }
 
   return (
 
@@ -45,20 +27,8 @@ export const Header = () => {
               <Nav className={style.link}>
                 <Link to="/">Home</Link>
                 <Link to="/projetos">Projetos</Link>
-                {enabled && (
-                  <Link to="/admin">Formulario</Link>
-                )}
-                {!enabled ? (
-
-                  <Link to="/login">
-                    <FiUser size={24} />
-                  </Link>
-
-                ) : (
-                  <FiLogOut size={24} onClick={handleLogout} />
-                )}
-
-              </Nav>
+             
+           </Nav>
             </div>
           </Navbar.Brand>
 
