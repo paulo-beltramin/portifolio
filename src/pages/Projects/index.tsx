@@ -66,7 +66,7 @@ export const Projects = () => {
 
             <span>
               Desenvolvido utilizando html , css , javascript  com o intuito de manter a base da programação web js sem a utilização
-              de frameworks...
+              de frameworks
             </span>
             <div >
               <Link to="https://github.com/paulo-beltramin/calc-medias" target="_blank">
