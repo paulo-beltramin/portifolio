@@ -2,6 +2,7 @@ import { Link } from "react-router"
 import cars from '../../assets/cars.png'
 import movie from '../../assets/movie.png'
 import calc from '../../assets/calc.png'
+import galery from '../../assets/galery.png'
 import style from './style.module.scss'
 
 export const Projects = () => {
@@ -70,6 +71,27 @@ export const Projects = () => {
             </span>
             <div >
               <Link to="https://github.com/paulo-beltramin/calc-medias" target="_blank">
+                <button>Ver código no github</button>
+              </Link>
+            </div>
+          </div>
+
+           <div className={style.list}>
+            <Link to={'https://galery-images-lime.vercel.app/'} target="_blank">
+
+              <img src={galery} alt="" title="Clique para ver o projeto" />
+            </Link>
+            <p className={style.title}>
+              Galeria de imagens
+            </p>
+
+            <span>
+                Pagina para adicionar diversas imagens , porem , sem banco de dados 
+                para armazenamento das imagens, somente pratica para utilização e estudos 
+                sobre o Jquery....
+            </span>
+            <div >
+              <Link to="https://github.com/paulo-beltramin/galery-images" target="_blank">
                 <button>Ver código no github</button>
               </Link>
             </div>
